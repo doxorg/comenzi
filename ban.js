@@ -4,10 +4,17 @@ module.exports = {
     name: "ban",
     description: "Kicks a member from the server",
 
-    async run (client, message, args) {
+const botOwnerID = your id here
 
-        if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('You can\'t use that!')
-        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('I don\'t have the right permissions.')
+function botOwnerFunc() {
+    if (message.author.id == 796077883591491656) {
+        // when true code
+    }
+    else {
+        // when false code
+    }
+
+    async run (client, message, args) {
 
         const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
