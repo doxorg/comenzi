@@ -4,6 +4,15 @@ module.exports = {
     name: "ban",
     description: "Kicks a member from the server",
 
+    @client.command(aliases=['rl'])
+    async def reload(ctx):
+    yourID = 810640541925900368
+    friendID = 
+    if ctx.message.author.id == yourID or ctx.message.author.id == friendID:
+        # Do something
+    else:
+        await ctx.send('You are not allowed to execute this command!')
+
     async run (client, message, args) {
 
         if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('You can\'t use that!')
